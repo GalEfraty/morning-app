@@ -1,0 +1,39 @@
+@import '../../../styles/vars.scss';
+
+.reusable-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  label {
+    position: absolute;
+    font-size: 18px;
+    top: 30px;
+    transition: 0.2s ease;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid $TextColor;
+    height: 35px;
+    margin-top: 20px;
+    padding: 2px 4px;
+    font-family: $FontRegular;
+    font-size: 16px;
+    color: $TextColor;
+
+    &.has-value {
+      + label {
+        top: 0;
+      }
+    }
+
+    &:focus {
+      + label {
+        top: 0;
+      }
+
+      outline-color: $TextColor;
+    }
+  }
+}

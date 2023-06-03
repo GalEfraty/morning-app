@@ -1,0 +1,109 @@
+@import '../../styles/vars.scss';
+
+.account-page {
+  background-color: $GeneralBackgroundColor;
+
+  .account-container {
+    padding: 150px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      padding: 120px 30px;
+    }
+
+    section {
+      background-color: $WhiteColor;
+      border-radius: 20px;
+      padding: 20px 15px;
+      margin-bottom: 40px;
+      width: 100%;
+
+      h1 {
+        font-weight: bold;
+        font-size: 42px;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          font-size: 18px;
+        }
+      }
+
+      &.account-details {
+        ul {
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &.account-related-businesses {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+
+          .business-card {
+            background-color: $GeneralBackgroundColor;
+            border-radius: 20px;
+            padding: 20px 15px;
+            width: 300px;
+            margin-top: 0;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 24px;
+
+            @media (max-width: 768px) {
+              width: 100%;
+              margin-left: 0;
+            }
+
+            .title {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 10px;
+
+              h3 {
+                font-size: 24px;
+              }
+            }
+
+            p {
+              &.address {
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                svg {
+                  margin-left: 10px;
+                }
+              }
+
+              &.date {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .empty {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

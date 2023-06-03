@@ -1,0 +1,25 @@
+@import '../../../styles/vars.scss';
+
+.reusable-button {
+  border-radius: 100px;
+  min-height: 56px;
+  min-width: 228px;
+  background-color: $PrimaryColor;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: $WhiteColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color: $PrimaryColor, $amount: 10%);
+  }
+}

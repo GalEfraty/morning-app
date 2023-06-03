@@ -1,0 +1,90 @@
+@import '../../../styles/vars.scss';
+
+.auth-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+
+  .auth-image {
+    height: 100%;
+    background-image: url('../../../assets/green_login_page.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $GeneralBackgroundColor;
+    width: 50%;
+
+    @media (max-width: 991px) {
+      width: 40%;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .auth-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 60px;
+
+    @media (max-width: 768px) {
+      padding: 120px 15px;
+    }
+
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+
+      h1 {
+        font-weight: bold;
+        font-size: 56px;
+        margin-bottom: 70px;
+
+        @media (max-width: 768px) {
+          font-size: 36px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .form-control {
+        width: 100%;
+
+        + .form-control {
+          margin-top: 60px;
+        }
+      }
+
+      .forgot-password-link {
+        font-size: 14px;
+        color: $TextColor;
+
+        &:hover {
+          color: darken($color: $TextColor, $amount: 20%);
+        }
+      }
+
+      .form-actions {
+        margin-top: 65px;
+
+        @media (max-width: 768px) {
+          margin-top: 25px;
+        }
+      }
+
+      .trial-link {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 40px;
+
+        @media (max-width: 768px) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
